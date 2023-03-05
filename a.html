@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="style2.css"/>
+    <script language="javascript">
+    function verif() {
+		if (document.getElementById("mail").value=="") {
+			alert("Tapez un email valable pour avoir une réponse.");
+			document.getElementById("mail").focus();
+			return false;
+		}}
+     
+
+    </script>
+
+</head>
+<body>
+    <form>
+
+        <fieldset>
+            <legend> <Strong>Coordonnées</Strong></legend>
+            <table >
+               <tr>
+                <td><label for="">nom & prénom</label></td>
+                <td> <input type="texte" id="name" required></td>
+            </tr>
+                <tr>
+                    <td><label for="">identifiant</label></td>
+                    <td> <input type="texte" id="identifiant" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Mail</label></td>
+                    <td> <input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="">pwd</label></td>
+                    <td> <input type="password" id="password"></td>
+                </tr>
+    <tr>
+        <td>
+            submit
+        </td>
+        <td> <button onclick="test()">submit</button></td>
+    </tr>
+            </table>    
+        </fieldset>
+
+        
+    </form>
+            <table id="tableau">
+        
+            </table>
+    <div id="edit">
+
+    </div>
+</body>
+<script>
+    function test(){
+    const tab=document.getElementById("tableau");
+    const edit1=document.getElementById("edit");
+    let elem1=document.getElementById("name").innerHTML;
+    //let elem2=document.getElementById("identifiant");
+    //let elem3=document.getElementById("email");
+    tab.innerText=elem1
+    }
+</script>
+</html>
